@@ -37,8 +37,11 @@
 #           +   (do the pushing)
 #
 #
-class Gyro(object):
-    
+class Gyros(object):
+
+    __devices = []
+    __angles = []
+
     #init : 
     #   param : CODE : int to know what MPU this object is
     def __init__(self, CODE):
@@ -46,28 +49,31 @@ class Gyro(object):
         #list of angles to do pushing
         if (not CODE or (CODE != 6050 and CODE != 9250)):
             raise ValueError
-        self.angles = [];
+        
+        self.__gyro = None
         self.maxAngle = -10000;
         self.minAngle = 10000;
 
         # init the Gyro Scope
         if CODE == 6050 : 
             # TODO: DO INIT FOR 6050
-
-            # import mpu6050test
+            import MPU6050
+	        __gyro = MPU6050.MPU6050()
             return None
+
         elif CODE == 9250 : 
             # TODO: DO INIT FOR 9250
 
-            #import FT232
+            import MPU9250
+            __gyro = MPU9250.MPU9250()
             return None
+
         else : 
             return "error init, Wrong CODE of MPU"
 
     #fetch DATA : put all fetch data to a list
     def fetchDatas(self):
-        print("fetching datas");
-        # TODO: do the fetching
+        self.__angles.append self.__gyro.get_anglesXY()
         
     #getMaxMin angles, put to class variables
     def getMaxMin(self):

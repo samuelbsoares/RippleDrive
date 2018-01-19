@@ -14,8 +14,11 @@ to/from the gyroscope in the provided register addresses
 
 MPU9250 is little-endian
 
+Check official github for FT232 source code
+https://github.com/adafruit/Adafruit_Python_GPIO/blob/master/Adafruit_GPIO/FT232H.py
+
 """
-import CalcUtils
+import CalcUtils as calc
 import Adafruit_GPIO.FT232H as FT232H
 
 class MPU9250:
@@ -32,7 +35,7 @@ class MPU9250:
     ACCEL_ZOUT0 = 0x3F
 
     # Constants
-    DEFAULT_I2C_ADDRESS = 0x68 # 0x68 -> AD0 = 0; 0x69 ->AD0 = 1
+    DEFAULT_I2C_ADDRESS = 0x69 # 0x68 -> AD0 = 0; 0x69 ->AD0 = 1
     WAKE = 0
     DEFAULT_SCALING = 16384.0 # (LSB/g) For Sensitivity Scale Factor AFS_SEL=0
 
@@ -61,15 +64,15 @@ class MPU9250:
         # Gets I2C instance from provided FT232H object
         self.__bus = self.__ft232h.get_i2c_device( self.__address )
 
-        self.__bus.write_byte_data( address, PWR_MGMT_1, WAKE )
+        self.__bus.write8( PWR_MGMT_1, WAKE )
 
     def get_gyroXYZ( self ):
         """
         Gets gyroscope values
         """
-        gyro_xout = self.__read_i2c_word( GYRO_XOUT0 )
-        gyro_yout = self.__read_i2c_word( GYRO_YOUT0 )
-        gyro_zout = self.__read_i2c_word( GYRO_ZOUT0 )
+        gyro_xout = self.__read_i2c_word( self.GYRO_XOUT0 )
+        gyro_yout = self.__read_i2c_word( self.GYRO_YOUT0 )
+        gyro_zout = self.__read_i2c_word( self.GYRO_ZOUT0 )
         return [gyro_xout, gyro_yout, gyro_zout]
 
     def get_accelXYZ( self ):
@@ -79,9 +82,9 @@ class MPU9250:
         accel_xout = self.__read_i2c_word( ACCEL_XOUT0 )
         accel_yout = self.__read_i2c_word( ACCEL_YOUT0 )
         accel_zout = self.__read_i2c_word( ACCEL_ZOUT0 )
-        accel_xout_scaled = accel_xout / DEFAULT_SCALING
-        accel_yout_scaled = accel_yout / DEFAULT_SCALING
-        accel_zout_scaled = accel_zout / DEFAULT_SCALING
+        accel_xout_scaled = accel_xout / self.DEFAULT_SCALING
+        accel_yout_scaled = accel_yout / self.DEFAULT_SCALING
+        accel_zout_scaled = accel_zout / self.DEFAULT_SCALING
         return [accel_xout_scaled, accel_yout_scaled, accel_zout_scaled]
 
     def get_anglesXY( self ):
@@ -107,6 +110,6 @@ class MPU9250:
 
         """
         if not regLow: regLow = regHigh + 1
-        high = self.__bus.__read8B( address, regHigh )
-        low = self.__bus.__read8B( address, regLow )
-        return transform_data( high, low )
+        high = self.__bus.readU8( address, regHigh )
+        low = self.__bus.readU8( address, regLow )
+        return calc.transform_data( high, low )

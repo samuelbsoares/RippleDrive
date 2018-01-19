@@ -49,10 +49,11 @@ class MPU6050:
 
         if not address: address = self.DEFAULT_I2C_ADDRESS
         self.__address = address
+        
         if not bus: bus = self.DEFAULT_BUS
-        self.__bus = bus
+        self.__bus = smbus.SMBus( bus )
 
-        self.__bus.write_byte_data( address, PWR_MGMT_1, WAKE )
+        self.__bus.write_byte_data( self.address, self.PWR_MGMT_1, self.WAKE )
 
     def get_gyroXYZ( self ):
         """
