@@ -6,6 +6,7 @@ Creating a diagnostic and performance tool for measuring wave-height and piston 
 * @gpfenniger - Griffin Pfenniger
 * @mahkrish - Mahen Krishnakumar
 * @marcelogaia - Marcelo Gaia
+* @Chris-Horan - Chris Horan
 
 ### Sensor Documentation
 - [FT-232H Documentation](http://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232H.pdf)
