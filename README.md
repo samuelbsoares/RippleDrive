@@ -27,7 +27,7 @@ Creating a diagnostic and performance tool for measuring wave-height and piston 
 
 ### Update May 2nd, 2018
 - Altitude Tech's IOTBit 3G HAT finally works! [Good News :+1:]
-- Mahen has added the [driver compatibility and install instructions](https://github.com/samuelsoares/RippleDrive/blob/master/3G_HAT/readme.md) for the 3G HAT. [Good News :+1:]
+- Mahen has added the [driver compatibility and install instructions](https://github.com/samuelbsoares/RippleDrive/blob/master/3G_HAT/readme.md) for the 3G HAT. [Good News :+1:]
 - ADS 1115 is not working. Maybe the chip is fried? [Bad News :-1:]
 - More people could work on the designing PCBs [Suggestion :star:]
 
