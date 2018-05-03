@@ -3,10 +3,10 @@
 ### Driver Compatibility
 Trial | Operating System | Kernel Version | Release Date | Does it work? (PASS/FAIL) | Install Notes
 ------|------------------|----------------|--------------|---------------------------|--------------
-1 | Raspbian Jessie | Kernel 4.14 | Release 2018-04-18 | FAIL | GCC does not recognize version, no clue how the drivers work
-2 | IOTBITQMI Modified Raspbian Jessie | Kernel 4.9 | Release 2017-08-17 | FAIL | Module does not load. "exec" format issue.
+1 | Raspbian Jessie | Kernel 4.14 | Release 2018-04-18 | FAIL | GCC does not recognize kernel version. I have no clue how the drivers work
+2 | IOTBITQMI Modified Raspbian Jessie | Kernel 4.9 | Release 2017-08-17 | FAIL | Driver does not load. "exec" format issue.
 3 | Ubuntu Mate 16.04.2 | Kernel 4.4 | Release 2016-04-21 | FAIL | Driver loads. Device is not functional. Finally starting to understand how the driver works.
-4 | Raspbian Jessie | Kernel 4.4 | Release 2016-11-29 | PASS | Driver loads. Device is functional and connects to the internet! Finally mastered the install process.
+4 | Raspbian Jessie | Kernel 4.4 | Release 2016-11-29 | PASS | Driver loads. Device is functional and connects to the internet! Mastered the install process.
 
 Overall Driver Installation Experience - :dizzy_face: / 10 
 
