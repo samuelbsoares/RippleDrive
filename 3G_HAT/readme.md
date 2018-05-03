@@ -1,6 +1,6 @@
-#### IOTBit 3G HAT Configuration and Driver Installation
+## IOTBit 3G HAT Configuration and Driver Installation
 
-#### Driver Compatibility
+### Driver Compatibility
 Trial | Operating System | Kernel Version | Release Date | Does it work? (PASS/FAIL) | Install Notes
 ------|------------------|----------------|--------------|---------------------------|--------------
 1 | Raspbian Jessie | Kernel 4.14 | Release 2018-04-18 | FAIL | GCC does not recognize version, no clue how the drivers work
@@ -10,7 +10,7 @@ Trial | Operating System | Kernel Version | Release Date | Does it work? (PASS/F
 
 Overall Driver Installation Experience - :dizzy_face: / 10 
 
-#### IOTBit 3G HAT Driver Installation and Setup Procedure
+### IOTBit 3G HAT Driver Installation and Setup Procedure
 Company - "Altitude-Tech"
 Repo - "IOTBit_Install"
 Device - IOTBit 3G HAT
