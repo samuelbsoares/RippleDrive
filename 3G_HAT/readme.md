@@ -11,10 +11,10 @@ Trial | Operating System | Kernel Version | Release Date | Does it work? (PASS/F
 Overall Driver Installation Experience - :dizzy_face: / 10 
 
 Footnotes
-(1) - GCC requires that the OS kernel and GCC installed versions align with the kernel version of the external linux headers. Fixed using --skip-gcc argument.
-(2) - IOTBITQMI is the official Raspbian distribution that Altitude Tech provides for it's IOTBit users.
-(3) - GobiSerial module does not compile properly on linux kernel versions > 4.4.
-(4) - Ubuntu detected drivers for Qualcomm modem and wanted to install them in a read-only drive. There was no work-around for that. Ubuntu could not read Serial port.
+* (1) - GCC requires that the OS kernel and GCC installed versions align with the kernel version of the external linux headers. Fixed using --skip-gcc argument.
+* (2) - [IOTBITQMI](http://download.altitude.tech/IOTBit%20(Formally%20Pianywhere)/Dev/18-04-17/) is the official Raspbian distribution that Altitude Tech provides for it's IOTBit users.
+* (3) - GobiSerial module does not compile properly on linux kernel versions > 4.4.
+* (4) - Ubuntu detected drivers for Qualcomm modem and wanted to install them in a read-only drive. There was no work-around for that. Ubuntu could not read Serial port.
 
 ### IOTBit 3G HAT Driver Installation and Setup Procedure
 - Company - "Altitude-Tech"
