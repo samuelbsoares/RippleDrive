@@ -11,11 +11,11 @@ Trial | Operating System | Kernel Version | Release Date | Does it work? (PASS/F
 Overall Driver Installation Experience - :dizzy_face: / 10 
 
 ### IOTBit 3G HAT Driver Installation and Setup Procedure
-Company - "Altitude-Tech"
-Repo - "IOTBit_Install"
-Device - IOTBit 3G HAT
+- Company - "Altitude-Tech"
+- Repo - "IOTBit_Install"
+- Device - IOTBit 3G HAT
 
-1. Flash your SD card with the following image: (Raspbian Jessie - K4.4 - 2016-11-29)[http://downloads.raspberrypi.org/raspbian/images/raspbian-2016-11-29/2016-11-25-raspbian-jessie.zip]
+1. Flash your SD card with the following image: [Raspbian Jessie - K4.4 - 2016-11-29](http://downloads.raspberrypi.org/raspbian/images/raspbian-2016-11-29/2016-11-25-raspbian-jessie.zip)
 2. Boot into Raspbian on the Pi and open up terminal.
 3. Type `lsusb | grep Qualcomm`, you should see a red highlighted text with Qualcomm. If not, please reconnect the board with better USB cables. If problem persists, please contact Altitude Tech.
 4. Clone the repo: `git clone https://github.com/Altitude-Tech/IOTBit_Install`
