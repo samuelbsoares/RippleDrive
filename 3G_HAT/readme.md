@@ -19,7 +19,9 @@ Overall Driver Installation Experience - :dizzy_face: / 10
 2. Firmly insert the 3G HAT over Raspberry Pi's 40 pin GPIO pins.
 3. Insert your SIM card into the SIM Card slot, with the diagonal corner of the SIM card facing away from the IOTBit.
 4. Boot into Raspbian on the Pi and open up terminal.
-5. Type `lsusb | grep Qualcomm`, you should see a red highlighted text with Qualcomm. If not, please reconnect the board with better USB cables. If problem persists, please contact Altitude Tech.
+5. Type `lsusb | grep Qualcomm`, you should see a red highlighted text with Qualcomm. 
+  - If not, please reconnect the board with better USB cables. 
+  - If problem persists, please contact Altitude Tech.
 6. Clone the repo: `git clone https://github.com/Altitude-Tech/IOTBit_Install`
 7. Change directory to driver folder: `cd IOTBit_Install`
 8. Edit driver script: `sudo nano IOTBit_Install.sh`
