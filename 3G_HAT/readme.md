@@ -34,47 +34,17 @@ Device - IOTBit 3G HAT
 12. Edit WVDial Configuration File : `sudo nano wvdial.config`
   - On line 2, remove `S0=0`.
   - On line 3, change `YOUR.SIMCARD_APN.HERE` to your Carrier's APN. 
-  - For our project, this was `pda.bell.ca`
+  - For our project, this is `pda.bell.ca`
   - Save changes: `Ctrl-O and Enter`
   - Exit nano: `Ctrl-X`
 13. Backup a copy of System's wvdial.config file: `sudo mv /etc/wvdial.conf /etc/wvdial.conf.bak`
 14. Move edited WVDial Configuration file to system directory: `sudo mv /home/pi/IOTBit_Install/wvdial.conf /etc/wvdial.conf`
 15. Reconfigure the WVDial Configuration file to system requirements: `sudo wvdialconfig /etc/wvdial.conf`
-16. Dial to the carrier network: `wvdial`
-  - You should see the something like this (if you used `pda.bell.ca`)
-      - `--> WvDial: Internet dialer version 1.60
---> Initializing modem.
---> Sending: ATZ
-ATZ
-OK
---> Sending: ATQ0 V1 E1 &C1 &D2 +FCLASS=0
-ATQ0 V1 E1 &C1 &D2 +FCLASS=0
-OK
---> Sending: AT+CGDCONT=1, "IP", "pda.bell.ca"
-AT+CGDCONT=1, "IP", "pda.bell.ca"
-OK
---> Modem initialized.
---> Sending: ATDT*99#
---> Waiting for carrier.
-ATDT*99#
-CONNECT 115200
---> Carrier detected. Starting PPP immediately.
---> Starting pppd at Fri Mar 27 19:14:19 2009
---> Pid of pppd: 3423
---> Using interface ppp0
---> pppd: @[06][08]�[06][08]
---> pppd: @[06][08]�[06][08]
---> pppd: @[06][08]�[06][08]
---> pppd: @[06][08]�[06][08]
---> pppd: @[06][08]�[06][08]
---> local IP address <you-should-see-an-ip-address-here>
---> pppd: @[06][08]�[06][08]
---> remote IP address <you-should-see-an-ip-address-here>
---> pppd: @[06][08]�[06][08]
---> primary DNS address <you-should-see-an-ip-address-here>
---> pppd: @[06][08]�[06][08]
---> secondary DNS address <you-should-see-an-ip-address-here>
---> pppd: @[06][08]�[06][08]`
-17. Add ppp0 network interface as default in routing table: `sudo route add default ppp0`
-18. Open a browser and type `google.com`. 
-19. Voila. Setup Complete! :clap::clap::clap::clap::ok_hand:
+16. Dial to the carrier network: `sudo wvdial`
+  - You should see the following lines as the command executes.
+    - `CONNECT 115200`
+    - `--> Carrier detected. Starting PPP immediately.`
+17. Open another terminal window or tab.
+18. Add ppp0 network interface as default in routing table: `sudo route add default ppp0`
+19. Open a browser and type `google.com`. 
+20. Voila. Setup Complete! :clap::clap::clap::clap:
