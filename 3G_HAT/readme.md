@@ -49,4 +49,4 @@ Overall Driver Installation Experience - :dizzy_face: / 10
 19. Open another terminal window or tab.
 20. Add ppp0 network interface as default in routing table: `sudo route add default ppp0`
 21. Open a browser and type `google.com`. 
-22. Setup Complete! :clap::clap::clap::clap:
+22. Setup Complete! :clap::clap:
