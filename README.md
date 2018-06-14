@@ -6,36 +6,11 @@ Creating a diagnostic and performance tool for measuring wave-height and piston 
   - [ ] Install i2c-tools using a bash script.
   - [ ] Create a 3G HAT driver install script.
   - [ ] Create a FT-232H driver install script.
-  - [ ] Create diagnostic toolkit that checks all crucial devices
-      - [ ] FT-232H
-      - [ ] ADS 1115
-      - [ ] MPU 6050 and MPU 9250
-      - [ ] 3G HAT
-      - [ ] The Pi itself
-        - [ ] Network issues
-        - [ ] O.S. issues
-        - [ ] SD card space (low space warning)
-- [ ] Test Setup.sh
-- [ ] Create a wave recording file (More info on this soon). 
-- [ ] Create PCB designs
-  - [ ] Create PCB design for Raspberry Pi's gyroscope (MPU-9250)
-  - [ ] Create PCB design for Power Management (ADS 1115)
-  - [ ] Create PCB design for the extended gyroscope (FT-232H and MPU-6050)
-- [ ] Send PCB designs to manufacturers
-
-
-
-### Update May 2nd, 2018
-- Altitude Tech's IOTBit 3G HAT finally works! [Good News :+1:]
-- Mahen has added the [driver compatibility and install instructions](https://github.com/samuelbsoares/RippleDrive/blob/master/3G_HAT/readme.md) for the 3G HAT. [Good News :+1:]
-- ADS 1115 is not working. Maybe the chip is fried? [Bad News :-1:]
-- More people could work on the designing PCBs [Suggestion :star:]
-
+  
 ### Project Contributors
 * @samuelbsoares - Samuel B. Soares
 * @gpfenniger - Griffin Pfenniger
 * @mahkrish - Mahen Krishnakumar
-* @marcelogaia - Marcelo Gaia
 * @Chris-Horan - Chris Horan
 
 ### Sensor Documentation
